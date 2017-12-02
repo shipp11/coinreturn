@@ -1,6 +1,7 @@
 def change_maker_3000(change)
 	coin = {}
-	# change, penny, amount of pennys
-	coin[:penny] = change
+	if change > 0
+		coin[:penny] = change
+end
 	coin
 end
