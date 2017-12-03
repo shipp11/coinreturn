@@ -31,5 +31,10 @@ class TestCoinChanger < Minitest::Test
 		assert_equal({:dime => 1}, change_maker_3000(change))
 	end
 
+	def test_assert_that_25_returns_a_quarter
+		change = 25
+		assert_equal({:quarter => 1}, change_maker_3000(change))
+	end
+
 
 end
