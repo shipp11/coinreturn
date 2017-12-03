@@ -8,7 +8,7 @@ def change_maker_3000(change)
 		if change > 0
 			coin [:penny] = change
 		end
-	elsif change > 9
+	elsif change > 9 && change < 25
 		coin[:dime] = change / 10
 		change = change % 10
 		if change > 4
@@ -17,7 +17,22 @@ def change_maker_3000(change)
 			if change > 0 
 				coin[:penny] = change 
 			end
+		elsif change > 25
+			coin[:quarter] = change / 25
+			change = change % 25
+			if change > 24
+				coin [:dime] = change / 10
+				change = change % 10
+				if change > 4
+					coin [:nickel] = change / 5
+					change = change % 5
+					if change >0
+						coin [:penny] = change
+					end
+				end
+			end
 		end
+
 	end
 	coin
 end
