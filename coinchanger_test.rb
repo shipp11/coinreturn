@@ -38,7 +38,7 @@ class TestCoinChanger < Minitest::Test
 	end
 
 	def test_assert_that_dollar_returns_a_bill
-		change = 1.00
+		change = 100
 		assert_equal({:dollar => 1}, change_maker_3000(change))
 	end
 
